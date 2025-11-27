@@ -85,9 +85,7 @@ function createPost(author, content) {
         timestamp: firebase.database.ServerValue.TIMESTAMP
     };
 
-    // この下の行を消して、投稿処理を記述
-    console.log('ボタンが押されました')
-    // この上の行を消して投稿処理を記述
+    postsRef.push(postData)
     // 行末に 「;」 を付けないこと
     .then(() => {
         showMessage('投稿が完了しました！');
